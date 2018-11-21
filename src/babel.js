@@ -14,7 +14,7 @@ export default function(babel) {
   `);
 
   const buildReturnStatement = template(`
-    if(TEST) {
+    if (TEST) {
       return React.createElement(Left, null);
     } else {
       return React.createElement(Right, null);
