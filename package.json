@@ -3,6 +3,9 @@
   "version": "0.0.6",
   "description": "",
   "main": "dist/use-branch.js",
+  "files": [
+    "babel/index.js"
+  ],
   "scripts": {
     "build": "microbundle -f cjs --sourcemap false",
     "build:babel": "microbundle -i src/babel.js -o babel/index.js -f cjs --sourcemap false"
