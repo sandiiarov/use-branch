@@ -1,0 +1,1 @@
+var o,e=(o=require("warning"))&&"object"==typeof o&&"default"in o?o.default:o;module.exports=function(){"production"!==process.env.NODE_ENV&&e(!0,'You likely forgot to add "use-branch/babel" to your babel config')};
