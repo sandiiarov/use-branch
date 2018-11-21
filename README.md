@@ -1,7 +1,6 @@
 # Use Branch "HOOK"
 
-![kapture 2018-11-21 at 13 00 52](https://user-images.githubusercontent.com/15861257/48863510-36c84180-ed8f-11e8-85ca-32cdaec478da.gif)
-
+![kapture 2018-11-21 at 14 27 59](https://user-images.githubusercontent.com/15861257/48866831-d7236380-ed99-11e8-9e82-3be6e1d01233.gif)
 
 ![npm](https://img.shields.io/npm/dt/use-branch.svg)
 ![npm](https://img.shields.io/npm/v/use-branch.svg)
