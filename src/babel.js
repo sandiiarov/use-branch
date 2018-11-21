@@ -1,17 +1,24 @@
 import { looksLike } from './helper';
 
 const SOURCE = 'use-branch';
-const NAME = 'Branch';
 
 export default function(babel) {
   const { types: t, template } = babel;
 
-  const buildBranchComponent = template(`
-    const ${NAME} = COMPONENT;
+  const buildLeft = template(`
+    const Left = () => COMPONENT;
+  `);
+
+  const buildRight = template(`
+    const Right = COMPONENT;
   `);
 
   const buildReturnStatement = template(`
-    return TEST ? CURRENT : React.createElement(${NAME}, null);
+    if(TEST) {
+      return React.createElement(Left, null);
+    } else {
+      return React.createElement(Right, null);
+    }
   `);
 
   return {
@@ -35,15 +42,18 @@ export default function(babel) {
         } = path.node.expression;
 
         if (name === USE_BRANCH) {
-          const BRANCH = buildBranchComponent({ COMPONENT });
           const { argument: CURRENT } = path.container[
             path.container.length - 1
           ];
 
-          path.replaceWith(BRANCH);
+          const LEFT = buildLeft({ COMPONENT: CURRENT });
+          const RIGHT = buildRight({ COMPONENT });
+
+          path.insertBefore(LEFT);
+          path.replaceWith(RIGHT);
+
           path.container[path.container.length - 1] = buildReturnStatement({
             TEST,
-            CURRENT,
           });
         }
       },
