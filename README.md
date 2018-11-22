@@ -15,6 +15,7 @@ useBranch(
   right: React.Component
 );
 ```
+<img width="1051" alt="screen shot 2018-11-22 at 4 12 53 pm" src="https://user-images.githubusercontent.com/15861257/48923122-939c2880-ee71-11e8-89af-fc26e172488d.png">
 
 # Install
 
