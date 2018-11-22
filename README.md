@@ -51,7 +51,7 @@ const Foo = () => {
 
 ```jsx
 import React from 'react';
-import useBracnch from 'use-branch';
+import useBranch from 'use-branch';
 
 const Foo = () => {
   const [token] = useToken();
