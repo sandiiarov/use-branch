@@ -50,6 +50,9 @@ const Foo = () => {
 ### Input:
 
 ```jsx
+import React from 'react';
+import useBracnch from 'use-branch';
+
 const Foo = () => {
   const [token] = useToken();
   useBranch(token, () => <div>Loading...</div>);
@@ -61,6 +64,8 @@ const Foo = () => {
 ### Output:
 
 ```jsx
+import React from 'react';
+
 const Foo = () => {
   const [token] = useToken();
 
