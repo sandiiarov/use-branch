@@ -7,6 +7,15 @@
 ![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/use-branch.svg)
 ![NpmLicense](https://img.shields.io/npm/l/use-branch.svg)
 
+# API
+```js
+useBranch(
+  test: boolean,
+  left: 'return statement of current block',
+  right: React.Component
+);
+```
+
 # Install
 
 ### With npm
